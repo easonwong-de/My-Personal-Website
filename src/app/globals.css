@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+:root {
+	--background: #ffffff;
+	--foreground: #171717;
+	--foreground-10: color-mix(in srgb, transparent 90%, var(--foreground) 10%);
+	--foreground-20: color-mix(in srgb, transparent 80%, var(--foreground) 20%);
+	--foreground-30: color-mix(in srgb, transparent 70%, var(--foreground) 30%);
+	--foreground-40: color-mix(in srgb, transparent 60%, var(--foreground) 40%);
+	--foreground-50: color-mix(in srgb, transparent 50%, var(--foreground) 50%);
+	--foreground-60: color-mix(in srgb, transparent 40%, var(--foreground) 60%);
+	--foreground-70: color-mix(in srgb, transparent 30%, var(--foreground) 70%);
+	--foreground-80: color-mix(in srgb, transparent 20%, var(--foreground) 80%);
+	--foreground-90: color-mix(in srgb, transparent 10%, var(--foreground) 90%);
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--background: #0a0a0a;
+		--foreground: #ededed;
+	}
+}
+
+@theme inline {
+	--color-background: var(--background);
+	--color-foreground: var(--foreground);
+	--font-sans: -apple-system, "BlinkMacSystemFont", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+	--font-mono: "SF Mono", SFMono-Regular, ui-monospace, "DejaVu Sans Mono", Menlo, Consolas, monospace;
+}
+
+body {
+	background-color: var(--background);
+	color: var(--foreground);
+	font-family: var(--font-sans);
+	letter-spacing: 0.01em;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+}
