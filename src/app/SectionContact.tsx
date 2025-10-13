@@ -1,6 +1,6 @@
 export default function SectionContact() {
 	return (
-		<section className="flex flex-row gap-4 w-full py-16 mt-16">
+		<section className="flex flex-row w-full py-16 mt-16 gap-4">
 			Contact
 		</section>
 	);

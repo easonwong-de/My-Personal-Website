@@ -7,7 +7,7 @@ import SectionContact from "./SectionContact";
 
 export default function Home() {
 	return (
-		<main className="flex flex-col items-center mx-1 w-full sm:mx-auto sm:w-5/6 md:w-2/3 max-w-4xl">
+		<main className="flex flex-col items-center w-full max-w-4xl mx-1 sm:mx-auto sm:w-5/6 md:w-2/3">
 			<SectionHero />
 			<Navigator />
 			<SectionExperience />

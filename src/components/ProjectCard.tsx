@@ -16,17 +16,17 @@ export default function ProjectCard({ logo, time, company, title, roleList }: Pr
 				alt={`${company} logo`}
 				width={24}
 				height={24}
-				className="w-12 h-12 rounded-xl object-contain"
+				className="object-contain w-12 h-12 rounded-xl"
 			/>
 			<div className="flex flex-col">
 				<div>{time}</div>
 				<div className="font-medium text-(--colour) text-base">{company}</div>
 				<div className="font-medium">{title}</div>
 			</div>
-			<div className="min-w-0 flex flex-col col-start-2 text-sm">
+			<div className="flex flex-col min-w-0 col-start-2 text-sm">
 				{roleList.map((role, index) => (
 					<div key={role} className="flex flex-row items-start">
-						<div className="w-1 h-1 bg-current rounded-full mx-2 mt-2 flex-shrink-0"></div>
+						<div className="flex-shrink-0 w-1 h-1 mx-2 mt-2 bg-current rounded-full"></div>
 						<div>{role}</div>
 					</div>
 				))}

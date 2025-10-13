@@ -2,9 +2,9 @@ import ExperienceCard from "@/components/ExperienceCard";
 
 export default function SectionExperience() {
 	return (
-		<section className="flex flex-row gap-4 w-full py-16 mt-16">
-			<div className="flex-1 shrink-1 basis-1/2 min-w-0 flex flex-col gap-4">
-				<h2 className="uppercase text-center p-4 font-bold text-xl">Work</h2>
+		<section className="flex flex-row w-full py-16 mt-16 gap-4">
+			<div className="flex flex-col flex-1 min-w-0 shrink-1 basis-1/2 gap-4">
+				<h2 className="p-4 text-xl font-bold text-center uppercase">Work</h2>
 				<ExperienceCard
 					logo="/image/tourbosoft.logo.jpeg"
 					time="06.2025 - Present"
@@ -39,8 +39,8 @@ export default function SectionExperience() {
 					]}
 				/>
 			</div>
-			<div className="flex-1 shrink-1 basis-1/2 min-w-0 flex flex-col gap-4">
-				<h2 className="uppercase text-center p-4 font-bold text-xl">Education</h2>
+			<div className="flex flex-col flex-1 min-w-0 shrink-1 basis-1/2 gap-4">
+				<h2 className="p-4 text-xl font-bold text-center uppercase">Education</h2>
 				<ExperienceCard
 					logo="/image/tub.logo.png"
 					time="10.2024 - Present"
