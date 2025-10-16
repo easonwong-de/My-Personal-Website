@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function SectionHero() {
+export default function HeroSection() {
 	return (
 		<section className="flex flex-col h-[70dvh] w-full">
 			<div className="grow-2"></div>
@@ -16,7 +16,7 @@ export default function SectionHero() {
 			<div className="font-light text-right">
 				<span className="flex items-center justify-end gap-2">
 					<Image
-						src="/svg/globe.europe.africa.svg"
+						src="/image/globe.europe.africa.svg"
 						alt="🌍"
 						width={16}
 						height={16}

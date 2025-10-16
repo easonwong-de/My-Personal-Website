@@ -1,13 +1,12 @@
 interface ButtonProps {
 	children: React.ReactNode;
 	onClick?: () => void;
-	className?: string;
 }
 
-export default function Button({ children, onClick, className = "" }: ButtonProps) {
+export default function Button({ children, onClick }: ButtonProps) {
 	return (
 		<button
-			className={`flex items-center justify-center font-medium transition-all rounded-full h-8 px-4 backdrop-blur-lg bg-(--colour-2) hover:bg-(--colour-3) ${className}`}
+			className="flex items-center justify-center h-8 px-4 font-medium transition-all rounded-full select-none backdrop-blur-xl cursor-pointer bg-(--background-6) hover:bg-(--background-9)"
 			onClick={onClick}
 		>
 			{children}

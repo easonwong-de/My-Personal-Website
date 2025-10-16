@@ -1,9 +1,9 @@
-import ExperienceCard from "@/components/ExperienceCard";
+import ExperienceCard from "@/app/ExperienceCard";
 
-export default function SectionExperience() {
+export default function ExperienceSection() {
 	return (
-		<section className="flex flex-row w-full py-16 mt-16 gap-4">
-			<div className="flex flex-col flex-1 min-w-0 shrink-1 basis-1/2 gap-4">
+		<section className="flex flex-col w-full gap-4 py-16 mt-16 lg:flex-row">
+			<div className="flex flex-col flex-1 min-w-0 gap-4 shrink-1 basis-1/2">
 				<h2 className="p-4 text-xl font-bold text-center uppercase">Work</h2>
 				<ExperienceCard
 					logo="/image/tourbosoft.logo.jpeg"
@@ -39,7 +39,7 @@ export default function SectionExperience() {
 					]}
 				/>
 			</div>
-			<div className="flex flex-col flex-1 min-w-0 shrink-1 basis-1/2 gap-4">
+			<div className="flex flex-col flex-1 min-w-0 gap-4 shrink-1 basis-1/2">
 				<h2 className="p-4 text-xl font-bold text-center uppercase">Education</h2>
 				<ExperienceCard
 					logo="/image/tub.logo.png"

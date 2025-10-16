@@ -1,44 +1,46 @@
 @import "tailwindcss";
 
 :root {
-	--colour-1: #17171710;
-	--colour-2: #17171720;
-	--colour-3: #17171730;
-	--colour-4: #17171740;
-	--colour-5: #17171750;
-	--colour-6: #17171760;
-	--colour-7: #17171770;
-	--colour-8: #17171780;
-	--colour-9: #17171790;
-	--colour-a: #171717a0;
-	--colour-b: #171717b0;
-	--colour-c: #171717c0;
-	--colour-d: #171717d0;
-	--colour-e: #171717e0;
-	--colour-f: #171717f0;
 	--colour: #171717;
+	--colour-low: #515151;
 	--background: #ffffff;
+	--background-1: #e2e2e210;
+	--background-2: #e2e2e220;
+	--background-3: #e2e2e230;
+	--background-4: #e2e2e240;
+	--background-5: #e2e2e250;
+	--background-6: #e2e2e260;
+	--background-7: #e2e2e270;
+	--background-8: #e2e2e280;
+	--background-9: #e2e2e290;
+	--background-a: #e2e2e2a0;
+	--background-b: #e2e2e2b0;
+	--background-c: #e2e2e2c0;
+	--background-d: #e2e2e2d0;
+	--background-e: #e2e2e2e0;
+	--background-f: #e2e2e2f0;
 }
 
 @media (prefers-color-scheme: dark) {
 	:root {
-		--colour-1: #ededed10;
-		--colour-2: #ededed20;
-		--colour-3: #ededed30;
-		--colour-4: #ededed40;
-		--colour-5: #ededed50;
-		--colour-6: #ededed60;
-		--colour-7: #ededed70;
-		--colour-8: #ededed80;
-		--colour-9: #ededed90;
-		--colour-a: #edededa0;
-		--colour-b: #edededb0;
-		--colour-c: #edededc0;
-		--colour-d: #edededd0;
-		--colour-e: #ededede0;
-		--colour-f: #edededf0;
 		--colour: #ededed;
+		--colour-low: #b4b4b4;
 		--background: #0a0a0a;
+		--background-1: #26262610;
+		--background-2: #26262620;
+		--background-3: #26262630;
+		--background-4: #26262640;
+		--background-5: #26262650;
+		--background-6: #26262660;
+		--background-7: #26262670;
+		--background-8: #26262680;
+		--background-9: #26262690;
+		--background-a: #262626a0;
+		--background-b: #262626b0;
+		--background-c: #262626c0;
+		--background-d: #262626d0;
+		--background-e: #262626e0;
+		--background-f: #262626f0;
 	}
 }
 

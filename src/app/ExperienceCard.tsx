@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-interface ProjectCardProps {
+interface ExperienceCardProps {
 	logo: string;
 	time: string;
 	company: string;
@@ -8,9 +8,9 @@ interface ProjectCardProps {
 	roleList: string[];
 }
 
-export default function ProjectCard({ logo, time, company, title, roleList }: ProjectCardProps) {
+export default function ExperienceCard({ logo, time, company, title, roleList }: ExperienceCardProps) {
 	return (
-		<div className="min-w-0 grid grid-cols-[max-content_auto] grid-rows-[max-content_max-content] bg-(--colour-1) p-4 gap-4 rounded-2xl w-full text-(--colour-8) text-sm">
+		<div className="min-w-0 grid grid-cols-[max-content_auto] grid-rows-[max-content_max-content] bg-(--background-6) p-4 gap-4 rounded-2xl w-full text-(--colour-low) text-sm">
 			<Image
 				src={logo}
 				alt={`${company} logo`}
@@ -20,11 +20,11 @@ export default function ProjectCard({ logo, time, company, title, roleList }: Pr
 			/>
 			<div className="flex flex-col">
 				<div>{time}</div>
-				<div className="font-medium text-(--colour) text-base">{company}</div>
+				<h3 className="font-medium text-(--colour) text-base">{company}</h3>
 				<div className="font-medium">{title}</div>
 			</div>
 			<div className="flex flex-col min-w-0 col-start-2 text-sm">
-				{roleList.map((role, index) => (
+				{roleList.map((role) => (
 					<div key={role} className="flex flex-row items-start">
 						<div className="flex-shrink-0 w-1 h-1 mx-2 mt-2 bg-current rounded-full"></div>
 						<div>{role}</div>
