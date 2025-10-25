@@ -4,9 +4,11 @@ import TechCard from "@/app/TechCard";
 
 export default function ProjectSection() {
 	return (
-		<section className="flex flex-col w-full gap-4 py-16 mt-16 lg:flex-row">
-			<div className="flex flex-col flex-1 min-w-0 gap-4 shrink-1 basis-1/2">
-				<h2 className="p-4 text-xl font-bold text-center uppercase">Project</h2>
+		<section className="mt-16 flex w-full flex-col gap-4 py-16 lg:flex-row">
+			<div className="flex min-w-0 flex-1 shrink-1 basis-1/2 flex-col gap-4">
+				<h2 className="p-4 text-center text-xl font-bold uppercase">
+					Project
+				</h2>
 				<ProjectCard
 					cover="/image/atbc.cover.png"
 					name="Adaptive Tab Bar Colour"
@@ -39,9 +41,11 @@ export default function ProjectSection() {
 					]}
 				/>
 			</div>
-			<div className="flex flex-col flex-1 min-w-0 gap-4 shrink-1 basis-1/2">
-				<h2 className="p-4 text-xl font-bold text-center uppercase">Tech stack</h2>
-				<div className="grid gap-4 grid-cols-[repeat(auto-fit, minmax(200px, 1fr))]">
+			<div className="flex min-w-0 flex-1 shrink-1 basis-1/2 flex-col gap-4">
+				<h2 className="p-4 text-center text-xl font-bold uppercase">
+					Tech stack
+				</h2>
+				<div className="grid-cols-[repeat(auto-fit, minmax(200px, 1fr))] grid gap-4">
 					<TechCard
 						icon="/image/javascript.svg"
 						name="JavaScript"

@@ -7,9 +7,14 @@ interface ProjectCardProps {
 	chipList: React.ReactNode[];
 }
 
-export default function ProjectCard({ cover, name, description, chipList }: ProjectCardProps) {
+export default function ProjectCard({
+	cover,
+	name,
+	description,
+	chipList,
+}: ProjectCardProps) {
 	return (
-		<div className="w-full min-w-0 text-sm text-(--colour-low) rounded-2xl relative overflow-hidden">
+		<div className="relative w-full min-w-0 overflow-hidden rounded-2xl text-sm text-(--colour-low)">
 			<Image
 				src={cover}
 				alt={`${name} preview`}
@@ -18,11 +23,15 @@ export default function ProjectCard({ cover, name, description, chipList }: Proj
 				className="object-cover"
 			/>
 			<div className="absolute bottom-0 w-full p-4">
-				<div className="flex flex-col gap-1 p-4 rounded-xl backdrop-blur-xl bg-(--background-6)">
-					<h3 className="font-medium text-(--colour) text-base">{name}</h3>
+				<div className="flex flex-col gap-1 rounded-xl bg-(--background-6) p-4 backdrop-blur-xl">
+					<h3 className="text-base font-medium text-(--colour)">
+						{name}
+					</h3>
 					<div>{description}</div>
 				</div>
-				<div className="flex flex-row flex-wrap gap-1 mt-1 text-(--colour)">{chipList}</div>
+				<div className="mt-1 flex flex-row flex-wrap gap-1 text-(--colour)">
+					{chipList}
+				</div>
 			</div>
 		</div>
 	);

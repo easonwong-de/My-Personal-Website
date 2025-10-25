@@ -2,7 +2,7 @@ import Button from "@/components/Button";
 
 export default function Navigator() {
 	return (
-		<nav className="sticky top-16 mb-[30dvh] z-50">
+		<nav className="sticky top-16 z-50 mb-[30dvh]">
 			<div className="flex gap-4">
 				<Button>Experience</Button>
 				<Button>Repertoire</Button>
