@@ -1,13 +1,12 @@
 import { dirname } from "path";
 import { fileURLToPath } from "url";
+
 import { FlatCompat } from "@eslint/eslintrc";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-const compat = new FlatCompat({
-	baseDirectory: __dirname,
-});
+const compat = new FlatCompat({ baseDirectory: __dirname });
 
 const eslintConfig = [
 	{
@@ -30,10 +29,7 @@ const eslintConfig = [
 	),
 	{
 		languageOptions: {
-			parserOptions: {
-				projectService: true,
-				tsconfigRootDir: __dirname,
-			},
+			parserOptions: { projectService: true, tsconfigRootDir: __dirname },
 		},
 		rules: {
 			"@typescript-eslint/no-explicit-any": "error",

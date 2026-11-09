@@ -1,4 +1,5 @@
 import Image from "next/image";
+
 import styles from "./TechCard.module.css";
 
 interface TechCardProps {

@@ -1,4 +1,5 @@
 import Image from "next/image";
+
 import styles from "./ExperienceCard.module.css";
 
 interface ExperienceCardProps {

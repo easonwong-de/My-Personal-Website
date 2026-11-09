@@ -1,4 +1,5 @@
 import Image from "next/image";
+
 import styles from "./IconButton.module.css";
 
 export default function IconButton() {
