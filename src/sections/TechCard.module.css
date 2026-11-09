@@ -1,0 +1,36 @@
+.card {
+	display: flex;
+	min-width: 0;
+	flex-direction: row;
+	gap: 1rem;
+	overflow: hidden;
+	border-radius: 1rem;
+	background-color: var(--background-6);
+	padding: 1rem;
+}
+
+.icon {
+	height: 1rem;
+	width: auto;
+	border-radius: 0.75rem;
+	object-fit: cover;
+}
+
+.info {
+	display: flex;
+	flex-direction: column;
+	gap: 0.25rem;
+}
+
+.name {
+	font-size: 1rem;
+	line-height: 1.5rem;
+	font-weight: 500;
+	color: var(--colour);
+}
+
+.description {
+	font-size: 0.875rem;
+	line-height: 1.25rem;
+	color: var(--colour-low);
+}

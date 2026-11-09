@@ -1,6 +1,10 @@
-@import "tailwindcss";
-
 :root {
+	--font-sans:
+		-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+		Arial, sans-serif;
+	--font-mono:
+		"SF Mono", SFMono-Regular, ui-monospace, "DejaVu Sans Mono", Menlo,
+		Consolas, monospace;
 	--colour: #171717;
 	--colour-low: #515151;
 	--background: #ffffff;
@@ -44,13 +48,12 @@
 	}
 }
 
-@theme inline {
-	--font-sans:
-		-apple-system, "BlinkMacSystemFont", "Segoe UI", Roboto,
-		"Helvetica Neue", Arial, sans-serif;
-	--font-mono:
-		"SF Mono", SFMono-Regular, ui-monospace, "DejaVu Sans Mono", Menlo,
-		Consolas, monospace;
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 
 body {
@@ -58,6 +61,8 @@ body {
 	color: var(--colour);
 	font-family: var(--font-sans);
 	letter-spacing: 0.01em;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 h1,

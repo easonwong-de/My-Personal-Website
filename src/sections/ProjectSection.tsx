@@ -1,14 +1,10 @@
-import Chip from "@/components/Chip";
-import ProjectCard from "@/app/ProjectCard";
-import TechCard from "@/app/TechCard";
+import styles from "./ProjectSection.module.css";
 
 export default function ProjectSection() {
 	return (
-		<section className="mt-16 flex w-full flex-col gap-4 py-16 lg:flex-row">
-			<div className="flex min-w-0 flex-1 shrink-1 basis-1/2 flex-col gap-4">
-				<h2 className="p-4 text-center text-xl font-bold uppercase">
-					Project
-				</h2>
+		<section className={styles.section}>
+			<div className={styles.column}>
+				<h2 className={styles.heading}>Project</h2>
 				<ProjectCard
 					cover="/image/atbc.cover.png"
 					name="Adaptive Tab Bar Colour"
@@ -41,11 +37,9 @@ export default function ProjectSection() {
 					]}
 				/>
 			</div>
-			<div className="flex min-w-0 flex-1 shrink-1 basis-1/2 flex-col gap-4">
-				<h2 className="p-4 text-center text-xl font-bold uppercase">
-					Tech stack
-				</h2>
-				<div className="grid-cols-[repeat(auto-fit, minmax(200px, 1fr))] grid gap-4">
+			<div className={styles.column}>
+				<h2 className={styles.heading}>Tech stack</h2>
+				<div className={styles.techGrid}>
 					<TechCard
 						icon="/image/javascript.svg"
 						name="JavaScript"

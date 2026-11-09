@@ -1,0 +1,11 @@
+.navigator {
+	position: sticky;
+	top: 4rem;
+	z-index: 50;
+	margin-bottom: 30dvh;
+}
+
+.links {
+	display: flex;
+	gap: 1rem;
+}

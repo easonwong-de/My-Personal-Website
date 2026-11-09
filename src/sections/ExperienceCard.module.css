@@ -1,0 +1,61 @@
+.card {
+	display: grid;
+	width: 100%;
+	min-width: 0;
+	grid-template-columns: max-content auto;
+	grid-template-rows: max-content max-content;
+	gap: 1rem;
+	border-radius: 1rem;
+	background-color: var(--background-6);
+	padding: 1rem;
+	font-size: 0.875rem;
+	line-height: 1.25rem;
+	color: var(--colour-low);
+}
+
+.logo {
+	height: 3rem;
+	width: 3rem;
+	border-radius: 0.75rem;
+	object-fit: contain;
+}
+
+.header {
+	display: flex;
+	flex-direction: column;
+}
+
+.company {
+	font-size: 1rem;
+	line-height: 1.5rem;
+	font-weight: 500;
+	color: var(--colour);
+}
+
+.title {
+	font-weight: 500;
+}
+
+.roleList {
+	grid-column-start: 2;
+	display: flex;
+	min-width: 0;
+	flex-direction: column;
+	font-size: 0.875rem;
+	line-height: 1.25rem;
+}
+
+.roleItem {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+}
+
+.bullet {
+	margin: 0.5rem 0.5rem 0;
+	height: 0.25rem;
+	width: 0.25rem;
+	flex-shrink: 0;
+	border-radius: 9999px;
+	background-color: currentColor;
+}

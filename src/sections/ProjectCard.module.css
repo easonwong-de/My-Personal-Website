@@ -1,0 +1,51 @@
+.card {
+	position: relative;
+	width: 100%;
+	min-width: 0;
+	overflow: hidden;
+	border-radius: 1rem;
+	font-size: 0.875rem;
+	line-height: 1.25rem;
+	color: var(--colour-low);
+}
+
+.cover {
+	object-fit: cover;
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
+.overlay {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	padding: 1rem;
+}
+
+.info {
+	display: flex;
+	flex-direction: column;
+	gap: 0.25rem;
+	border-radius: 0.75rem;
+	background-color: var(--background-6);
+	padding: 1rem;
+	backdrop-filter: blur(24px);
+	-webkit-backdrop-filter: blur(24px);
+}
+
+.name {
+	font-size: 1rem;
+	line-height: 1.5rem;
+	font-weight: 500;
+	color: var(--colour);
+}
+
+.chips {
+	margin-top: 0.25rem;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 0.25rem;
+	color: var(--colour);
+}

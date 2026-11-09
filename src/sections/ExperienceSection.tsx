@@ -1,12 +1,10 @@
-import ExperienceCard from "@/app/ExperienceCard";
+import styles from "./ExperienceSection.module.css";
 
 export default function ExperienceSection() {
 	return (
-		<section className="mt-16 flex w-full flex-col gap-4 py-16 lg:flex-row">
-			<div className="flex min-w-0 flex-1 shrink-1 basis-1/2 flex-col gap-4">
-				<h2 className="p-4 text-center text-xl font-bold uppercase">
-					Work
-				</h2>
+		<section className={styles.section}>
+			<div className={styles.column}>
+				<h2 className={styles.heading}>Work</h2>
 				<ExperienceCard
 					logo="/image/tourbosoft.logo.jpeg"
 					time="06.2025 - Present"
@@ -41,10 +39,8 @@ export default function ExperienceSection() {
 					]}
 				/>
 			</div>
-			<div className="flex min-w-0 flex-1 shrink-1 basis-1/2 flex-col gap-4">
-				<h2 className="p-4 text-center text-xl font-bold uppercase">
-					Education
-				</h2>
+			<div className={styles.column}>
+				<h2 className={styles.heading}>Education</h2>
 				<ExperienceCard
 					logo="/image/tub.logo.png"
 					time="10.2024 - Present"
