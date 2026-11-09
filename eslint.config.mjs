@@ -10,7 +10,6 @@ const compat = new FlatCompat({
 });
 
 const eslintConfig = [
-	...compat.extends("next/core-web-vitals", "next/typescript"),
 	{
 		ignores: [
 			"node_modules/**",
@@ -18,7 +17,29 @@ const eslintConfig = [
 			"out/**",
 			"build/**",
 			"next-env.d.ts",
+			"auto-imports.d.ts",
+			"unimport.d.ts",
+			"eslint.config.mjs",
 		],
+	},
+	...compat.extends(
+		"next/core-web-vitals",
+		"next/typescript",
+		"plugin:@typescript-eslint/strict-type-checked",
+		"plugin:@typescript-eslint/stylistic-type-checked",
+	),
+	{
+		languageOptions: {
+			parserOptions: {
+				projectService: true,
+				tsconfigRootDir: __dirname,
+			},
+		},
+		rules: {
+			"@typescript-eslint/no-explicit-any": "error",
+			"react/jsx-no-undef": "off",
+			"no-undef": "off",
+		},
 	},
 ];
 

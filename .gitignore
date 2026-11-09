@@ -83,6 +83,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+auto-imports.d.ts
+unimport.d.ts
 
 ### Node ###
 # Logs
