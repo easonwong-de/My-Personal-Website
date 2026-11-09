@@ -1,6 +1,7 @@
-import type { NextConfig } from "next";
 import crypto from "node:crypto";
 import path from "node:path";
+
+import type { NextConfig } from "next";
 import unimport from "unimport/unplugin";
 
 interface LoaderContext {
@@ -51,6 +52,18 @@ function getHashIdent(
 }
 
 const config: NextConfig = {
+	output: "export",
+	images: { unoptimized: true },
+	experimental: {
+		useLightningcss: true,
+		optimizePackageImports: ["gsap", "@gsap/react"],
+	},
+	compiler: {
+		removeConsole:
+			process.env.NODE_ENV === "production"
+				? { exclude: ["error"] }
+				: false,
+	},
 	webpack: (webpackConfig: {
 		module?: {
 			rules?: (WebpackRule | false | null | undefined | "" | 0)[];
