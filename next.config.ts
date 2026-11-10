@@ -54,23 +54,45 @@ function getHashIdent(
 const config: NextConfig = {
 	output: "export",
 	images: { unoptimized: true },
-	experimental: {
-		useLightningcss: true,
-		optimizePackageImports: ["gsap", "@gsap/react"],
-	},
+	experimental: { optimizePackageImports: ["gsap", "@gsap/react"] },
 	compiler: {
 		removeConsole:
 			process.env.NODE_ENV === "production"
 				? { exclude: ["error"] }
 				: false,
 	},
-	webpack: (webpackConfig: {
-		module?: {
-			rules?: (WebpackRule | false | null | undefined | "" | 0)[];
-		};
-		plugins?: unknown[];
-		[key: string]: unknown;
-	}) => {
+	webpack: (
+		webpackConfig: {
+			output?: {
+				filename?: string;
+				chunkFilename?: string;
+				[key: string]: unknown;
+			};
+			module?: {
+				rules?: (WebpackRule | false | null | undefined | "" | 0)[];
+			};
+			plugins?: unknown[];
+			[key: string]: unknown;
+		},
+		{ isServer }: { isServer: boolean },
+	) => {
+		if (!isServer && webpackConfig.output) {
+			webpackConfig.output.filename = "static/chunks/[contenthash].js";
+			webpackConfig.output.chunkFilename =
+				"static/chunks/[contenthash].js";
+
+			for (const plugin of webpackConfig.plugins ?? []) {
+				if (plugin && typeof plugin === "object") {
+					const p = plugin as Record<string, unknown>;
+					if (
+						typeof p.name === "string" &&
+						p.name.includes("polyfills")
+					) {
+						p.name = "static/chunks/[hash].js";
+					}
+				}
+			}
+		}
 		webpackConfig.plugins?.push(
 			unimport.webpack({
 				presets: ["react"],
