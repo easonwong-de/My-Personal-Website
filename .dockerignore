@@ -1,0 +1,11 @@
+.git
+.github
+.next
+out
+node_modules
+.DS_Store
+*.tsbuildinfo
+next-env.d.ts
+unimport.d.ts
+README.md
+LICENSE
